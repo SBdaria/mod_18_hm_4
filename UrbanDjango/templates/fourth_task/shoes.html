@@ -1,0 +1,23 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block title %}Shoes{% endblock %}
+
+{% block pagename %}
+    <h1>{{title}}</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for i in shoes%}
+            <li>{{i}} <button>Посмотреть</button></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block exit %}
+    {{ block.super }}
+{% endblock %}
